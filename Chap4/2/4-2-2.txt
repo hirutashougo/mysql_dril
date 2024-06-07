@@ -1,0 +1,21 @@
+CREATE TABLE
+	order_main
+	(
+		po_id INT AUT0_INCREMENT NOT NULL,
+		/*文字列で7桁以内*/
+		user_id CHAR(7),
+		order_date DATE,
+		derivery_date DATE,
+		PRIMARY KEY(po_id)
+	)
+;
+
+CREATE INDEX
+	ind_order
+ON
+	order_main
+	(
+		publish,
+		publish_date
+	)
+;

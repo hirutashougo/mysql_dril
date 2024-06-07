@@ -1,0 +1,10 @@
+MariaDB [workbook_second]> CREATE INDEX
+    ->  ind_rental
+    -> ON
+    ->  rental
+    ->  (
+    ->          rental_date
+    ->  )
+    -> ;
+Query OK, 0 rows affected (0.010 sec)
+Records: 0  Duplicates: 0  Warnings: 0

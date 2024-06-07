@@ -2,12 +2,13 @@ MariaDB [workbook_second]> CREATE TABLE
     ->  order_desc
     ->  (
     ->          po_id INT NULL,
-    ->          p_id CHAR(10) NOT NULL,
+    ->          /*文字列で10桁以内*/
+    ->          p_id CHAR(10),
     ->          quantity INT,
     ->          PRIMARY KEY(po_id, p_id)
     ->  )
     -> ;
-Query OK, 0 rows affected (0.010 sec)
+Query OK, 0 rows affected (0.009 sec)
 
-MariaDB [workbook_second]> SELECT * FROM order_desc;
+MariaDB [workbook_second]> select * from order_desc;
 Empty set (0.002 sec)

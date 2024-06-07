@@ -11,19 +11,18 @@ CREATE TABLE INTO
 
 間違い
 1.CREATE TABLE INTO  →  CREATE TABLE
-2.NULLを許さないPRIMARY KEYは、全カラムの宣言の後に記述する
+2.PRIMARY KEYの前のカンマはいらない
 
 CREATE TABLE
 	rental
 	(
-		id INT AUTO_INCREMENT NOT NULL,
+		id INT AUTO_INCREMENT PRIMARY KEY,
 		/*文字列で7桁以内*/
 		user_id CHAR(7),
 		/*文字列で13桁以内*/
 		isbn CHAR(13),
 		rental_date DATE,
 		/*初期値は0*/
-		returned SMALLINT DEFAULT 0,
-		PRIMARY KEY (id)
+		returned SMALLINT DEFAULT 0
 	)
 ;

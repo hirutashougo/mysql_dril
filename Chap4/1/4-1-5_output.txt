@@ -12,7 +12,7 @@ MariaDB [workbook_second]> CREATE TABLE
     ->          PRIMARY KEY (id)
     ->  )
     -> ;
-Query OK, 0 rows affected (0.010 sec)
+Query OK, 0 rows affected (0.009 sec)
 
 MariaDB [workbook_second]> select * from rental;
 Empty set (0.002 sec)
