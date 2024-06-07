@@ -1,0 +1,16 @@
+SELECT
+	sh.s_name AS 店舗名,
+	SUM(sl.s_value) AS 全売上高
+FROM
+	shop AS sh
+INNER JOIN
+	sales AS sl
+ON
+	sl.s_id = sh.s_id
+WHERE
+	sl.s_date BETWEEN '2012-01' AND '2012-12'
+GROUP BY
+	sl.s_id
+ORDER BY
+	SUM(sl.s_value) ASC
+;

@@ -1,0 +1,17 @@
+SELECT
+	CONCAT(us.l_name, us.f_name) AS 氏名,
+	COUNT(re.user_id) AS 貸し出し数
+FROM
+	usr AS us
+INNER JOIN
+	rental AS re
+ON
+	re.user_id = us.user_id
+WHERE
+	/*貸し出し中を表す0*/
+	re.returned = 0
+GROUP BY
+	CONCAT(us.l_name, us.f_name)
+ORDER BY
+	COUNT(re.user_id) DESC
+;

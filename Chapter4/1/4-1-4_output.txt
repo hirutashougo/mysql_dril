@@ -1,0 +1,16 @@
+MariaDB [workbook_second]> CREATE TABLE
+    ->  books
+    ->  (
+    ->          isbn CHAR(7) NOT NULL,
+    ->          title VARCHAR(255) NOT NULL,
+    ->          price INT,
+    ->          publish VARCHAR(30) NOT NULL,
+    ->          publish_date DATE NOT NULL,
+    ->          category_id CHAR(5) NOT NULL,
+    ->          PRIMARY KEY (isbn)
+    ->  )
+    -> ;
+Query OK, 0 rows affected (0.013 sec)
+
+MariaDB [workbook_second]> select * from books;
+Empty set (0.002 sec)

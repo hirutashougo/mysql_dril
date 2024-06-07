@@ -1,0 +1,13 @@
+MariaDB [workbook_second]> CREATE TABLE
+    ->  author
+    ->  (
+    ->          author_id CHAR(5) NOT NULL,
+    ->          name VARCHAR(30),
+    ->          name_kana VARCHAR(100),
+    ->          birth DATE
+    ->  )
+    -> ;
+Query OK, 0 rows affected (0.010 sec)
+
+MariaDB [workbook_second]> select * from author;
+Empty set (0.002 sec)

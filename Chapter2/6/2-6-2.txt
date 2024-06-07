@@ -1,0 +1,10 @@
+	SELECT
+		CONCAT(u.l_name,u.f_name) AS 氏名
+	FROM
+		usr AS u
+EXCEPT
+	SELECT
+		q.name
+	FROM
+		quest AS q
+;

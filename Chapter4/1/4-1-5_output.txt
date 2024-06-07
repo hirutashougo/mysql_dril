@@ -1,0 +1,18 @@
+MariaDB [workbook_second]> CREATE TABLE
+    ->  rental
+    ->  (
+    ->          id INT AUTO_INCREMENT NOT NULL,
+    ->          /*文字列で7桁以内*/
+    ->          user_id CHAR(7),
+    ->          /*文字列で13桁以内*/
+    ->          isbn CHAR(13),
+    ->          rental_date DATE,
+    ->          /*初期値は0*/
+    ->          returned SMALLINT DEFAULT 0,
+    ->          PRIMARY KEY (id)
+    ->  )
+    -> ;
+Query OK, 0 rows affected (0.010 sec)
+
+MariaDB [workbook_second]> select * from rental;
+Empty set (0.002 sec)

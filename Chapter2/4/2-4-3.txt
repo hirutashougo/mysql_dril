@@ -1,0 +1,30 @@
+SELECT
+	om.order_date AS 発注日,
+	od.p_id AS 注文コード,
+	CONCAT(u.l_name, u.f_name) AS 利用者氏名,
+	p.p_name AS 商品名,
+	p.price AS 商品単価,
+	od.quantity AS 購入数
+FROM
+	order_main AS om
+RIGHT JOIN
+	order_desc AS od
+ON
+	om.po_id = od.po_id
+RIGHT JOIN
+	usr AS u
+ON
+	om.user_id = u.user_id
+RIGHT JOIN
+	product AS p
+ON
+	od.p_id = p.p_id
+WHERE
+		om.order_date IS NOT NULL
+	AND
+		om.delivery_date IS NULL
+ORDER BY
+	om.order_date ASC,
+	om.po_id ASC,
+	p.p_id ASC
+;

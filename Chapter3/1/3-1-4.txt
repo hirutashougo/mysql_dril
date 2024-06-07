@@ -1,0 +1,23 @@
+INSERT
+	product
+VALUES
+	(
+		SB00000001,
+		黒スタンプ,
+		1250
+	)
+;
+
+間違い
+1.INSERT → INSERT INTO
+2.SB00000001,  黒スタンプ→  'SB00000001', '黒スタンプ'
+
+INSERT INTO
+	product
+VALUES
+	(
+		'SB00000001',
+		'黒スタンプ',
+		1250
+	)
+;

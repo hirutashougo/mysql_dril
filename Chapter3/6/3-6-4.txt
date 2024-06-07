@@ -1,0 +1,18 @@
+UPDATE
+	books
+SET
+	category_id = 'XXXXX'
+WHERE
+	EXISTS
+	(
+	SELECT
+		*
+	FROM
+		rental
+	WHERE
+			books.isbn = rental.isbn
+		AND
+			/*紛失中を表す9*/
+			returned = 9
+	)
+;

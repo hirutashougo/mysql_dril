@@ -1,0 +1,23 @@
+DELETE FROM
+	usr
+WHERE
+	user_id = 'A200507'
+	AND
+	l_name = '鈴木'
+	AND
+	f_name = '徳次郎'
+	AND
+	l_name_kana = 'スズキ'
+	AND
+	f_name_kana = 'トクジロウ'
+	AND
+	prefecture = '群馬県'
+	AND
+	city = '群馬市北町'
+	AND
+	o_address = '1-1-1'
+	AND
+	tel = '040-999-9999'
+	AND
+	email IS NULL
+;

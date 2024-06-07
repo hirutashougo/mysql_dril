@@ -1,0 +1,10 @@
+	SELECT
+		CONCAT(u.l_name_kana,u.f_name_kana) AS ユーザー氏名
+	FROM
+		usr AS u
+INTERSECT
+	SELECT
+		q.name_kana AS ユーザー氏名
+	FROM
+		quest AS q
+;

@@ -1,0 +1,6 @@
+UPDATE
+	product
+SET
+	/*登録商品の値段を10%値上げ*/
+	price = price * 1.1
+;

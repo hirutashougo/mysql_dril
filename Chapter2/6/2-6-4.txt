@@ -1,0 +1,32 @@
+	SELECT
+		a.name_kana
+	FROM
+		author AS a
+UNION ALL
+	SELECT
+		u.l_name_kana,
+		u.f_name_kana
+	FROM
+		usr AS u
+ORDER BY
+	1 DESC
+;
+
+間違い
+1.SELECT u.l_name_kana,u.f_name_kana 
+	→ SELECT CONCAT(u.l_name_kana, u.f_name_kana)
+2.UNION ALL → UNION
+
+	SELECT
+		a.name_kana
+	FROM
+		author AS a
+UNION
+	SELECT
+		CONCAT(u.l_name_kana, u.f_name_kana)	
+	FROM
+		usr AS u
+ORDER BY
+	/*1列目で降順にソートする*/
+	1 DESC
+;
