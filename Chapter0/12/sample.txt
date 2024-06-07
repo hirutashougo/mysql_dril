@@ -1,0 +1,11 @@
+SELECT
+	prefecture,
+	AVG(answer1) AS 評価平均
+FROM
+	quest
+GROUP BY
+	prefecture
+HAVING
+	/*評価平均2未満が対象*/
+	AVG(answer1) < 2
+;

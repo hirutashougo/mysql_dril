@@ -1,0 +1,28 @@
+SELECT
+	page_id,
+	referer,
+	ip_address
+FROM
+	access_log
+ORDER BY
+	access_date ASC
+LIMIT
+	10, 0
+;
+
+間違い
+1.access_date ASC ではなく、access_date DESC
+2.LIMIT 10, 0 ではなく、LIMIT 10
+
+SELECT
+	page_id,
+	referer,
+	ip_address
+FROM
+	access_log
+ORDER BY
+	access_date DESC
+LIMIT
+	/*アクセス日の新しい10件が対象*/
+	10
+;

@@ -1,0 +1,11 @@
+SELECT
+	title,
+	price
+FROM
+	books
+WHERE
+	/*価格、2500円から3500円が対象*/
+	price BETWEEN 2500 AND 3500
+ORDER BY
+	price ASC
+;

@@ -1,0 +1,16 @@
+SELECT ALL
+	class,
+	depart_id
+FROM
+	employee
+;
+
+間違い
+1.ALLではなく、DISTINCT
+2.classの列のみでいい
+
+SELECT DISTINCT
+	class
+FROM
+	employee
+;

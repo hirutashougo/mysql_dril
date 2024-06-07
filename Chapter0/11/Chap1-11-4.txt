@@ -1,0 +1,8 @@
+SELECT
+	publish AS 出版社,
+	FLOOR(AVG(price)) AS 書籍価格の平均値
+FROM
+	books
+GROUP BY
+	publish
+;

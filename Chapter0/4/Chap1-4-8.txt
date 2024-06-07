@@ -1,0 +1,24 @@
+SELECT
+	title
+	publish
+	price
+FROM
+	books
+WHERE
+	price <= 5000
+;
+
+間違い
+1.列名の後にカンマ(,)がついていない
+2.5000未満が対象なので、price < 5000とすべき
+
+SELECT
+	title,
+	publish,
+	price
+FROM
+	books
+WHERE
+	/*5000未満の価格が対象*/
+	price < 5000
+;

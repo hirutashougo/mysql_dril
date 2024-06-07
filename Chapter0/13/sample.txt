@@ -1,0 +1,15 @@
+SELECT
+	referer,
+	COUNT(*) AS カウント数,
+	CASE
+		/*カウント数50以上ならA*/
+		WHEN COUNT(*) >= 50 THEN 'A'
+		/*カウント数10以上ならB*/
+		WHEN COUNT(*) >= 10 THEN 'B'
+		ELSE 'C'
+	END AS ランク
+FROM
+	access_log
+GROUP BY
+	referer
+;

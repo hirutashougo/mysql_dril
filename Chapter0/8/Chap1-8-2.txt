@@ -1,0 +1,12 @@
+SELECT
+	name,
+	answer1,
+	answer2
+FROM
+	quest
+ORDER BY
+	answered DESC
+LIMIT
+	/*回答日が新しい順番に10件分*/
+	10
+;

@@ -1,0 +1,11 @@
+SELECT
+	author_id AS 著者番号,
+	COUNT(author_id) AS 登録数
+FROM
+	author_books
+GROUP BY
+	author_id
+HAVING
+	/*登録数が3冊以上が対象*/
+	COUNT(author_id) >= 3
+;

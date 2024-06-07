@@ -1,0 +1,21 @@
+SELECT
+	page_id,
+	SUM( * )
+FROM
+	access_log
+ORDER BY
+	page_id
+;
+
+間違い
+1.SUM( * )ではなく、COUNT(page_id)
+2.ORDER BYではなく、GROUP BY
+
+SELECT
+	page_id,
+	COUNT(page_id)
+FROM
+	access_log
+GROUP BY
+	page_id
+;

@@ -1,0 +1,17 @@
+SELECTS
+	title
+	publish
+FROM
+	books
+;
+
+間違い
+1.SELECTSではなくSELECT
+2.titleやpublishといったカラム名の後には、最後のもの以外にカンマ(,)をつける
+
+SELECT
+	title,
+	publish
+FROM
+	books
+;

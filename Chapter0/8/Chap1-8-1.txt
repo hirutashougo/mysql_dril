@@ -1,0 +1,12 @@
+SELECT
+	title,
+	publish_date
+FROM
+	books
+ORDER BY
+	publish_date DESC
+LIMIT
+	/*刊行日の新しいものを3件目から5件分が対象
+	開始行は2、対象の行数は5*/
+	2, 5
+;

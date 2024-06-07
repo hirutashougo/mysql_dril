@@ -1,0 +1,21 @@
+SELECT
+	title,
+FROM
+	books
+WHERE
+	publish LIKE '_社'
+;
+
+間違い
+1. title, ではなく、 title となる
+2. '_社'  ではなく、 '%社' となる
+
+SELECT
+	title
+FROM
+	books
+WHERE
+	publish
+LIKE
+	'%社'
+;

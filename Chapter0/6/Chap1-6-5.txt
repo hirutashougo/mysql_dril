@@ -1,0 +1,32 @@
+SELECT
+	isbn,
+	title
+FROM
+	books
+WHERE
+		publish = '秀和システム'
+	AND
+		publish = '日経BP'
+	OR
+		price < 3000
+;
+
+間違い
+1.理論演算子の順序が、AND,ORではなく、OR,AND
+2.最初のpublishに関する条件を()に囲む
+
+SELECT
+	isbn,
+	title
+FROM
+	books
+WHERE
+	(
+		publish = '秀和システム'
+	OR
+		publish = '日経BP'
+	)
+	AND
+		/*3000円未満の書籍が対象*/
+		price < 3000
+;

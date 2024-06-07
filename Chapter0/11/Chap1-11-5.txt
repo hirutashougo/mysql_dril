@@ -1,0 +1,27 @@
+SELECT
+	depart_id,
+	class,
+	CONACAT('l_name', 'f_name') AS 氏名
+FROM
+	employee
+ORDER BY
+	depart_id,
+	class DESC
+;
+
+間違い
+1.CONACAT('l_name', 'f_name')  →  CONACAT(l_name, f_name)
+	''で囲わない
+2.depart_id, class DESC  →  depart_id DESC, class DESC
+	各カラムにDESCをつける
+
+SELECT
+	depart_id,
+	class,
+	CONCAT(l_name, f_name) AS 氏名
+FROM
+	employee
+ORDER BY
+	depart_id DESC,
+	class DESC
+;

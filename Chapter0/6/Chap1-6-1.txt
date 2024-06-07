@@ -1,0 +1,10 @@
+SELECT
+	*
+FROM
+	quest
+WHERE
+		sex = '女'
+	AND
+		/*年齢が20代(20～29歳の間)*/
+		age BETWEEN 20 AND 29
+;

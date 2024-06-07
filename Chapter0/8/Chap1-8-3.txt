@@ -1,0 +1,15 @@
+SELECT
+	user_id,
+	isbn,
+	rental_date
+FROM
+	rental
+WHERE
+	/*未返却のものを表す0*/
+	returned = '0'
+ORDER BY
+	rental_date ASC
+LIMIT
+	/*貸し出し日が古いものから順に5件分*/
+	5
+;

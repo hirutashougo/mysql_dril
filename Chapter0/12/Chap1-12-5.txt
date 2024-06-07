@@ -1,0 +1,31 @@
+SELECT
+	depart_id,
+	COUNT(*)
+FROM
+	employee
+WHERE
+	sex = 2
+ORDER BY
+	depart_id
+WHERE
+	COUNT(*) >= 3
+;
+
+間違い
+1.ORDER BY  →  GROUP BY
+2.WHERE COUNT(*) >= 3  →  HAVING COUNT(*) >= 3  
+
+SELECT
+	depart_id,
+	COUNT(*)
+FROM
+	employee
+WHERE
+	/*性別が女性であることを表す2*/
+	sex = 2
+GROUP BY
+	depart_id
+HAVING
+	/*女性人数3人以上が対象*/
+	COUNT(*) >= 3
+;

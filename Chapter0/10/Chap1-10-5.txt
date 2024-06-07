@@ -1,0 +1,26 @@
+SELECT
+	prefecture,
+	sex,
+	age,
+	AVG(answer1) IS 評価平均
+FROM
+	quest
+GROUP BY
+	prefecture,
+	sex
+;
+
+間違い
+1.AVG(answer1) IS 評価平均 → AVG(answer1) AS '評価平均'
+2.ageは入ってはいけない
+
+SELECT
+	prefecture,
+	sex,
+	AVG(answer1) AS '評価平均'
+FROM
+	quest
+GROUP BY
+	prefecture,
+	sex
+;

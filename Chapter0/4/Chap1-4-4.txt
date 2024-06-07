@@ -1,0 +1,10 @@
+SELECT
+	name,
+	sex,
+	prefecture
+FROM
+	quest
+WHERE
+	/*30歳以上40歳未満(30歳以上39歳以下)の回答者が対象*/
+	age BETWEEN 30 AND 39
+;
