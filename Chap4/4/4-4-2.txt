@@ -3,6 +3,7 @@ ALTER TABLE
 MODIFY
 	/*記述は50字以内*/
 	l_name VARCHAR(50) NOT NULL,
+MODIFY
 	/*記述は50字以内*/
-	f_name VARCHAR(50) NOT NULL,
+	f_name VARCHAR(50) NOT NULL
 ;

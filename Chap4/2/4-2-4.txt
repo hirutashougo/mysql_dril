@@ -22,4 +22,4 @@ ON
 		city,
 		o_address
 	)
-;
+;	

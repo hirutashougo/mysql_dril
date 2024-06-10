@@ -2,6 +2,6 @@ UPDATE
 	books
 SET
 	isbn = CONCAT('ISBN',isbn),
-	/*消費税10%の場合の税抜き価格を算出*/
-	price = price *( 1.0 / 1.1 )
+	/*消費税5%の場合の税抜き価格を算出*/
+	price = price / 1.05
 ;
