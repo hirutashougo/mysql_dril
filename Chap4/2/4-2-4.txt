@@ -1,0 +1,25 @@
+CREATE INDEX
+	ind_usr
+IN
+	usr
+	(
+		prefecture
+		city
+		o_address
+	)
+;
+
+間違い
+1.IN → ON
+2.各カラム名にカンマ(,)をつける
+
+CREATE INDEX
+	ind_usr
+ON
+	usr
+	(
+		prefecture,
+		city,
+		o_address
+	)
+;

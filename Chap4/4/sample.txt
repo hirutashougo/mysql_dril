@@ -1,0 +1,5 @@
+ALTER TABLE
+	usr
+MODIFY
+	o_sddress VARCHAR(255) NULL
+;

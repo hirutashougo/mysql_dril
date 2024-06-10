@@ -1,0 +1,6 @@
+ALTER TABLE
+	books
+MODIFY
+	/*記述は100字以内*/
+	publish VARCHAR(100) NULL
+;

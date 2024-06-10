@@ -1,0 +1,16 @@
+ALTER TABLE
+	access_log
+MODIFY WITH
+	referer, VARCHAR(100), NULL
+;
+
+間違い
+1.MODIFY WITH  →  MODIFY
+2.referer, VARCHAR(100), NULL  →  referer VARCHAR(100) NULL
+	カンマを消す
+
+ALTER TABLE
+	access_log
+MODIFY
+	referer VARCHAR(100) NULL
+;
