@@ -4,7 +4,7 @@ WHERE
 	NOT EXISTS
 	(
 		SELECT
-			s_id
+			shop.s_id
 		FROM
 			shop
 		WHERE

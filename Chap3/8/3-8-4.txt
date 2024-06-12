@@ -1,8 +1,7 @@
 DELETE FROM
 	books
 WHERE
-	isbn
-IN
+	isbn IN
 	(
 		SELECT
 			isbn

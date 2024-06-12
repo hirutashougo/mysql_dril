@@ -5,11 +5,11 @@ SET
 WHERE
 	EXISTS
 	(
-	SELECT
-		*
-	FROM
-		rental
-	WHERE
+		SELECT
+			*
+		FROM
+			rental
+		WHERE
 			books.isbn = rental.isbn
 		AND
 			/*紛失中を表す9*/
