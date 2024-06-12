@@ -4,7 +4,7 @@ CREATE TABLE
 		/*文字列で5桁以内*/
 		s_id CHAR(5) NOT NULL,
 		/*文字列で7桁以内*/
-		s_date CHAR(7) NOT NULL,
+		s_date CHAR(7) DEFAULT '0000-00',
 		s_value INT,
 		PRIMARY KEY (s_id, s_date)
 	)

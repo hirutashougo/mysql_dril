@@ -1,17 +1,8 @@
-MariaDB [workbook_second]> CREATE TABLE
-    ->  author
-    ->  (
-    ->          /*文字列で5桁以内*/
-    ->          author_id CHAR(5) NOT NULL,
-    ->          /*文字列で30桁以内*/
-    ->          name VARCHAR(30),
-    ->          /*文字列で100桁以内*/
-    ->          name_kana VARCHAR(100),
-    ->          birth DATE,
-    ->          PRIMARY KEY (author_id)
-    ->  )
-    -> ;
-Query OK, 0 rows affected (0.009 sec)
 
-MariaDB [workbook_second]> select * from author;
-Empty set (0.002 sec)
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| author_id | char(5)      | NO   | PRI | NULL    |       |
+| name      | varchar(30)  | YES  |     | NULL    |       |
+| name_kana | varchar(100) | YES  |     | NULL    |       |
+| birth     | date         | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+

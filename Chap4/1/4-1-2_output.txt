@@ -1,14 +1,7 @@
-MariaDB [workbook_second]> CREATE TABLE
-    ->  order_desc
-    ->  (
-    ->          po_id INT NULL,
-    ->          /*文字列で10桁以内*/
-    ->          p_id CHAR(10),
-    ->          quantity INT,
-    ->          PRIMARY KEY(po_id, p_id)
-    ->  )
-    -> ;
-Query OK, 0 rows affected (0.009 sec)
-
-MariaDB [workbook_second]> select * from order_desc;
-Empty set (0.002 sec)
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| po_id    | int(11)  | NO   | PRI | NULL    |       |
+| p_id     | char(10) | NO   | PRI | NULL    |       |
+| quantity | int(11)  | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+

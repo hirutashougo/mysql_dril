@@ -1,20 +1,10 @@
-MariaDB [workbook_second]> CREATE TABLE
-    ->  books
-    ->  (
-    ->          /*文字列で7桁以内*/
-    ->          isbn CHAR(7) NOT NULL,
-    ->          /*文字列で255桁以内*/
-    ->          title VARCHAR(255),
-    ->          price INT,
-    ->          /*文字列で30桁以内*/
-    ->          publish VARCHAR(30),
-    ->          publish_date DATE,
-    ->          /*文字列で5桁以内*/
-    ->          category_id CHAR(5),
-    ->          PRIMARY KEY (isbn)
-    ->  )
-    -> ;
-Query OK, 0 rows affected (0.014 sec)
-
-MariaDB [workbook_second]> select * from books;
-Empty set (0.002 sec)
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| isbn         | char(7)      | NO   | PRI | NULL    |       |
+| title        | varchar(255) | YES  |     | NULL    |       |
+| price        | int(11)      | YES  |     | NULL    |       |
+| publish      | varchar(30)  | YES  |     | NULL    |       |
+| publish_date | date         | YES  |     | NULL    |       |
+| category_id  | char(5)      | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+

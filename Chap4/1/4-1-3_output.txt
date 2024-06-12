@@ -1,15 +1,7 @@
-MariaDB [workbook_second]> CREATE TABLE
-    ->  sales
-    ->  (
-    ->          /*文字列で5桁以内*/
-    ->          s_id CHAR(5) NOT NULL,
-    ->          /*文字列で7桁以内*/
-    ->          s_date CHAR(7) NOT NULL,
-    ->          s_value INT,
-    ->          PRIMARY KEY (s_id, s_date)
-    ->  )
-    -> ;
-Query OK, 0 rows affected (0.011 sec)
-
-MariaDB [workbook_second]> select * from sales;
-Empty set (0.002 sec)
++---------+---------+------+-----+---------+-------+
+| Field   | Type    | Null | Key | Default | Extra |
++---------+---------+------+-----+---------+-------+
+| s_id    | char(5) | NO   | PRI | NULL    |       |
+| s_date  | char(7) | NO   | PRI | 0000-00 |       |
+| s_value | int(11) | YES  |     | NULL    |       |
++---------+---------+------+-----+---------+-------+
