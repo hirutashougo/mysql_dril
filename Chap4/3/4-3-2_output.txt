@@ -1,21 +1,19 @@
- CREATE TABLE
-    ->  sales
-    ->  (
-    ->          s_id CHAR(5) NOT NULL,
-    ->          s_date DATE NOT NULL,
-    ->          /*初期値0*/
-    ->          s_VALUE INT DEFAULT 0
-    ->  )
-    -> ;
-Query OK, 0 rows affected (0.332 sec)
+最初に作成したsalesテーブル
 
-MariaDB [workbook_second]> select * from sales;
-Empty set (0.002 sec)
++---------+---------+------+-----+---------+-------+
+| Field   | Type    | Null | Key | Default | Extra |
++---------+---------+------+-----+---------+-------+
+| s_id    | char(5) | NO   |     | NULL    |       |
+| s_date  | date    | NO   |     | NULL    |       |
+| s_VALUE | int(11) | YES  |     | 0       |       |
++---------+---------+------+-----+---------+-------+
 
-MariaDB [workbook_second]> ALTER TABLE
-    ->  sales
-    -> ADD
-    ->  PRIMARY KEY(s_id, s_date)
-    -> ;
-Query OK, 0 rows affected (0.020 sec)
-Records: 0  Duplicates: 0  Warnings: 0
+プライマリキー指定後のsalesテーブル
+
++---------+---------+------+-----+---------+-------+
+| Field   | Type    | Null | Key | Default | Extra |
++---------+---------+------+-----+---------+-------+
+| s_id    | char(5) | NO   | PRI | NULL    |       |
+| s_date  | date    | NO   | PRI | NULL    |       |
+| s_VALUE | int(11) | YES  |     | 0       |       |
++---------+---------+------+-----+---------+-------+

@@ -14,8 +14,7 @@ IN
 2.各カラム名にカンマ(,)をつける
 
 CREATE INDEX
-	ind_usr
-ON
+	ind_usr ON
 	usr
 	(
 		prefecture,
