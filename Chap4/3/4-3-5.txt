@@ -1,0 +1,19 @@
+ALTER TABLE
+	employee
+ADD TO
+	emil VARCHAR(255) NOT NULL
+BEFORE
+	depart_id
+;
+
+間違い
+1.ADD TO → ADD
+2.BEFORE → AFTER
+
+ALTER TABLE
+	employee
+ADD
+	emil VARCHAR(255) NOT NULL
+AFTER
+	depart_id
+;
