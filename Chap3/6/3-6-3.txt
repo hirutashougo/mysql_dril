@@ -1,10 +1,10 @@
+/*書籍情報テーブル上の、書名の後方に分類名を付加する*/
 UPDATE
 	books
 SET
-		title
-	=
-		CONCAT(
-			title,
+	title = 
+	CONCAT(
+		title,
 			(
 				SELECT
 					category_name
@@ -13,5 +13,5 @@ SET
 				WHERE
 					books.category_id = category.category_id
 			)
-		)
+	)
 ;
